@@ -1,0 +1,100 @@
+/* Imports */
+@import "fonts";
+@import "variables";
+@import "main";
+@import "buttons";
+@import "titles";
+@import "content";
+@import "navigation";
+@import "form";
+body {
+	font-family: 'passengersans-light';
+	margin: 0px;
+	background: #000000;
+	color: white;
+}
+h1,h2,h3,h4 { font-family: 'passengersans-bold'; }
+h1,h2,h3,h4,p,menu,main,section {margin:0px; }
+a {text-decoration:none;&:hover {text-decoration: none;}}
+ul { padding: 0px;margin: 0px;list-style: none;}
+input {outline:none;}
+.fullheight {
+	height: 100vh;
+	@include maxw(table_min) {
+		min-height: 600px;
+	}
+}
+.x-container {
+	margin: auto;
+	max-width: calc(100% - 600px);
+	@include maxw(mylaptop) {
+		max-width: calc(100% - 100px);
+	}
+	@include maxw(laptop) {
+		max-width: calc(100% - 200px);
+	}
+	@include maxw(tablet_p) {
+		max-width: calc(100% - 40px);
+	}
+	@include maxw(table_max) {
+		max-width: calc(100% - 40px);
+	}
+	@include maxw(table_min) {
+		max-width: calc(100% - 40px);
+	}
+	@include maxw(mobile) {
+		max-width: calc(100% - 40px);
+	}
+}
+
+.swiper-pagination {
+	position: absolute;
+    bottom: 40px !important;
+    transform: none;
+    left: 0px !important;
+    width: auto !important;
+	.swiper-pagination-bullet {
+		width: 8px;
+		height: 8px;
+		background: transparent;
+		border: solid 1px white;
+		position: relative;
+		&.swiper-pagination-bullet-active {
+			background: $green;
+			border: solid 1px $green;
+		}
+	}
+}
+
+.social {
+    position: absolute;
+    right: 0px;
+    bottom: 40px;
+    z-index: 15;
+    a {
+	    font-size: 12px;
+	    color: white;
+	    margin-left: 30px;
+	    transition: 0.3s;
+	    &:hover {
+	    	color: $green;
+	    }
+	}
+}
+
+::-webkit-scrollbar-thumb {
+    background: $green;
+    border-radius: 10px;
+    cursor: pointer;
+}
+::-webkit-scrollbar-track {
+    background: white;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    height: 5px;
+    @include maxw(table_max) {
+		width: 5px;
+    	height: 5px;
+	}
+}

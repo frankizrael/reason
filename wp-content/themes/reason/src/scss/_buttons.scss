@@ -1,0 +1,18 @@
+.btn {
+    font-size: 14px;
+    font-family: 'passengersans-medium';
+    padding: 13px 15px;
+    min-width: 120px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: $green;
+    color: #000000;
+    border: solid 1px $green;
+    &--green {
+        border: solid 1px $green;
+        background: transparent; 
+        color: $green;       
+    }
+}

@@ -1,0 +1,15 @@
+@import "utilities";
+header {
+	position: fixed;
+	width: 100%;
+    z-index: 5;	
+	.fixed {
+		display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    padding: 20px 0px;
+	    #menu {
+	        display: none;
+	    }
+	}
+}
